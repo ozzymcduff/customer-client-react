@@ -1,3 +1,4 @@
 export const ADD_CUSTOMER = 'ADD_CUSTOMER';
+export const ADD_CUSTOMERS = 'ADD_CUSTOMERS';
 export const DELETE_CUSTOMER = 'DELETE_CUSTOMER';
 export const EDIT_CUSTOMER = 'EDIT_CUSTOMER';

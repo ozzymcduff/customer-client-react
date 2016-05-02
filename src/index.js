@@ -4,7 +4,7 @@ import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import configureStore from './store/configureStore';
 import Root from './containers/Root';
-
+import loadData from './loadData';
 const store = configureStore();
 
 render(<AppContainer
@@ -13,6 +13,7 @@ render(<AppContainer
   />,
   document.getElementById('root')
 );
+loadData(store);
 
 if (module.hot) {
   module.hot.accept('./containers/Root', () => {
@@ -25,11 +26,3 @@ if (module.hot) {
     );
   });
 }
-
-/*
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
-
-ReactDOM.render(<App />, document.getElementById('root'));
-*/
