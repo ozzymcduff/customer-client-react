@@ -3,15 +3,16 @@ import _ from 'lodash';
 const initialState = [];
 
 export default function customers(state = initialState, action) {
+  function getId(){
+    return (state.length === 0) ? 0 : state[0].id + 1;
+  }
   switch (action.type) {
   case types.ADD_CUSTOMER:
-    return [{
-      id: (state.length === 0) ? 0 : state[0].id + 1,
-      info: action.info
-    }, ...state];
+    let info = action.info;
+    return [_.extend(_.clone(info),{id:getId()+i}), ...state];
 
   case types.ADD_CUSTOMERS:
-    let id = (state.length === 0) ? 0 : state[0].id + 1;
+    let id = getId();
     let infos = action.infos.map((info,i)=>
       _.extend(_.clone(info),{id:id+i})
     );
@@ -25,7 +26,7 @@ export default function customers(state = initialState, action) {
   case types.EDIT_CUSTOMER:
     return state.map(customer =>
       customer.id === action.id ?
-        { ...customer, info: action.info } :
+        action.info :
         customer
     );
 
