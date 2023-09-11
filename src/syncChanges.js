@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import { parseXmlCustomers } from './adapters/Xml';
 import * as types from './constants/ActionTypes';
 

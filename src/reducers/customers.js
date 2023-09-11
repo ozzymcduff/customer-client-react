@@ -9,7 +9,7 @@ export default function customers(state = initialState, action) {
   switch (action.type) {
   case types.ADD_CUSTOMER:
     let info = action.info;
-    return [_.extend(_.clone(info),{id:getId()+i}), ...state];
+    return [_.extend(_.clone(info),{id:getId()}), ...state];
 
   case types.ADD_CUSTOMERS:
     let id = getId();
