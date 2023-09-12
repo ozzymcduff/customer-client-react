@@ -23,8 +23,12 @@ function Customer({ customer, editCustomer }) {
   return (
     <div>
       {isDirty}
-      <div>{customer.firstName}</div>
-      <TextInput text={customer.lastName} onSave={handleSaveLastName} />
+      <div aria-label="First Name">{customer.firstName}</div>
+      <TextInput
+        label="Last Name"
+        text={customer.lastName}
+        onSave={handleSaveLastName}
+      />
     </div>
   );
 }
