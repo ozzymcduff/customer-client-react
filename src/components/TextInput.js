@@ -26,9 +26,9 @@ export default class TextInput extends Component {
     return (
       <input type='text'
              autoFocus='true'
-             value={this.state.text}
-             onBlur={this.handleBlur}
-             onChange={this.handleChange} />
+                          value={this.state.text}
+             onBlur={(e)=>this.handleBlur(e)}
+             onChange={(e)=>this.handleChange(e)} />
     );
   }
 }
