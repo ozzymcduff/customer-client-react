@@ -27,8 +27,8 @@ export default class Customer extends Component {
       isDirty = (<div>isDirty</div>);
     return (<div>
                 {isDirty}
-                <div>{customer.firstName}</div>
-                <TextInput text={customer.lastName}
+                <div aria-label="First Name">{customer.firstName}</div>
+                <TextInput label="Last Name" text={customer.lastName}
                        onSave={(text) => this.handleSaveLastName(customer, text)} />
             </div>);
     }

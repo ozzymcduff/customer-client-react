@@ -4,7 +4,8 @@ import PropTypes from "prop-types";
 export default class TextInput extends Component {
   static propTypes = {
     onSave: PropTypes.func.isRequired,
-    text: PropTypes.string
+    text: PropTypes.string,
+    label: PropTypes.string,
   };
 
   constructor(props, context) {
@@ -25,10 +26,12 @@ export default class TextInput extends Component {
   render() {
     return (
       <input type='text'
-             autoFocus='true'
-             value={this.state.text}
-             onBlur={this.handleBlur}
-             onChange={this.handleChange} />
+        autoFocus='true'
+        aria-label={this.props.label}
+        value={this.state.text}
+        onBlur={(e) => this.handleBlur(e)}
+        onChange={(e) => this.handleChange(e)}
+      />
     );
   }
 }
