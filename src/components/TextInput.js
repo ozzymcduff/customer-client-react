@@ -1,5 +1,5 @@
-import React, { Component, PropTypes } from 'react';
-import classnames from 'classnames';
+import React, { Component } from 'react';
+import PropTypes from "prop-types";
 
 export default class TextInput extends Component {
   static propTypes = {
@@ -27,8 +27,8 @@ export default class TextInput extends Component {
       <input type='text'
              autoFocus='true'
              value={this.state.text}
-             onBlur={::this.handleBlur}
-             onChange={::this.handleChange} />
+             onBlur={this.handleBlur}
+             onChange={this.handleChange} />
     );
   }
 }

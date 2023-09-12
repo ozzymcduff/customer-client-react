@@ -1,5 +1,5 @@
-import React, { Component, PropTypes } from 'react';
-import classnames from 'classnames';
+import React, { Component } from 'react';
+import PropTypes from "prop-types";
 import TextInput from './TextInput';
 import _ from 'lodash';
 

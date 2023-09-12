@@ -1,4 +1,4 @@
-<ArrayOfCustomer 
+<ArrayOfCustomer
     xmlns="http://schemas.datacontract.org/2004/07/Customers"
     xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
     <Customer>
@@ -8,7 +8,7 @@
         <AddressStreet i:nil="true"/>
         <FirstName>Oskar</FirstName>
         <Gender>Male</Gender>
-        <LastName>Gewalli</LastName>
+        <LastName>Larsson</LastName>
         <PictureUri i:nil="true"/>
     </Customer>
     <Customer>
@@ -16,9 +16,9 @@
         <AddressCity i:nil="true"/>
         <AddressCountry i:nil="true"/>
         <AddressStreet i:nil="true"/>
-        <FirstName>Wally</FirstName>
+        <FirstName>Anders</FirstName>
         <Gender>Male</Gender>
-        <LastName>Gewalli</LastName>
+        <LastName>Johnsson</LastName>
         <PictureUri i:nil="true"/>
     </Customer>
 </ArrayOfCustomer>

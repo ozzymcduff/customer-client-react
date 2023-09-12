@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from "prop-types";
 import Customer from './Customer';
 
 export default class MainSection extends Component {
@@ -24,7 +25,7 @@ export default class MainSection extends Component {
             <Customer key={customer.id} customer={customer} {...actions} />
           )}
         </div>
-        <button onClick={::this.refreshCommand}>Refresh</button>
+        <button onClick={this.refreshCommand}>Refresh</button>
     </section>)
     }
 }
