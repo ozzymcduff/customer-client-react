@@ -1,30 +1,22 @@
-import React, { Component, PropTypes } from 'react';
+import React from 'react';
 import Customer from './Customer';
-
-export default class MainSection extends Component {
-  static propTypes = {
-    customers: PropTypes.array.isRequired,
-    actions: PropTypes.object.isRequired
+//
+function MainSection({ customers, actions }) {
+  const refreshCommand = () => {
+    console.log("refresh");
   };
 
-  constructor(props, context) {
-    super(props, context);
-  }
-  refreshCommand(){
-    console.log('refresh');
-  }
-
-  render() {
-    const { customers, actions } = this.props;
-    let isBusy = (<div>isBusy</div>);
-    return (<section>
-        {isBusy}
-        <div>
-          {customers.map(customer =>
-            <Customer key={customer.id} customer={customer} {...actions} />
-          )}
-        </div>
-        <button onClick={::this.refreshCommand}>Refresh</button>
-    </section>)
-    }
+  //let isBusy = <div>isBusy</div>;
+  return (
+    <section>
+      {/*isBusy*/}
+      <div>
+        {customers.map((customer) => (
+          <Customer key={customer.id} customer={customer} {...actions} />
+        ))}
+      </div>
+      <button onClick={refreshCommand}>Refresh</button>
+    </section>
+  );
 }
+export default MainSection;
