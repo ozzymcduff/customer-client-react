@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function TextInput({ onSave, text }) {
+function TextInput({ onSave, text, label }) {
   const [inputText, setInputText] = useState(text || "");
 
   const handleChange = (e) => {
@@ -13,6 +13,7 @@ function TextInput({ onSave, text }) {
 
   return (
     <input
+      aria-label={label}
       type="text"
       autoFocus={true}
       value={inputText}
